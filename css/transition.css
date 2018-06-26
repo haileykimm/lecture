@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+.box1{
+  width: 200px;
+  height: 200px;
+  border: 10px solid #000;
+  background: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: background, border-radius, transform;
+  /*시작하는 지점에 부여해야 된다. 애니메이션 순서 변경 가능*/
+  transition-duration: 5000ms;/*시작하는 지점에 부여해야 된다.*/
+  transition-delay: 0s, 2s, 4s;
+  transition-timing-function: ease-in-out;
+}
+
+/*선택자에 의한 애니메이션*/
+.box1:hover{
+  border-radius: 50%;
+  transform: rotate(360deg);
+  background-color: pink;
+}
